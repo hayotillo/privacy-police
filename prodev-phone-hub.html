@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика конфиденциальности — PhoneHub</title>
+  <meta name="description" content="Политика конфиденциальности сервиса и мобильного приложения PhoneHub — специализированного маркетплейса смартфонов в Узбекистане.">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #eff6ff;
+      --text-main: #0f172a;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0;
+      --success: #16a34a;
+      --warning-bg: #fffbeb;
+      --warning-border: #fef3c7;
+      --warning-text: #92400e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-body);
+      line-height: 1.65;
+      margin: 0;
+      padding: 32px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      padding: 48px 44px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.04), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      border: 1px solid var(--border-color);
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px 10px;
+      }
+      .container {
+        padding: 28px 20px;
+        border-radius: 12px;
+      }
+    }
+
+    .brand-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      background: var(--primary);
+      color: #ffffff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+    }
+
+    .brand-name {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.4px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      border: 1px solid #bfdbfe;
+    }
+
+    h1 {
+      color: var(--text-main);
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.6px;
+    }
+
+    .meta-info {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    h2 {
+      color: var(--text-main);
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h3 {
+      color: var(--text-main);
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0 0 14px 0;
+    }
+
+    ul, ol {
+      margin: 0 0 16px 0;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    .callout {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin: 24px 0;
+      font-size: 14.5px;
+      color: #1e3a8a;
+    }
+
+    .callout-warning {
+      background: var(--warning-bg);
+      border-left: 4px solid #f59e0b;
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin: 24px 0;
+      font-size: 14.5px;
+      color: var(--warning-text);
+      border-top: 1px solid var(--warning-border);
+      border-right: 1px solid var(--warning-border);
+      border-bottom: 1px solid var(--warning-border);
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 20px 0;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background: #f8fafc;
+      color: var(--text-main);
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .toc {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+
+    .toc-title {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    .toc ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #ffffff !important;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      margin-top: 8px;
+      box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="brand-header">
+      <div class="brand-logo">📱</div>
+      <div class="brand-name">PhoneHub</div>
+    </div>
+
+    <div class="badge">Правовой документ • Защита данных</div>
+    <h1>Политика конфиденциальности</h1>
+    <div class="meta-info">
+      <strong>Дата последнего обновления:</strong> 7 сентября 2026 г. • <strong>Действует для:</strong> Сайта и мобильного приложения PhoneHub
+    </div>
+
+    <div class="callout">
+      <strong>Кратко:</strong> PhoneHub уважает вашу конфиденциальность. Мы собираем только те данные, которые необходимы для авторизации, безопасного размещения объявлений о смартфонах и связи между покупателями и продавцами. Мы <strong>никогда не продаем</strong> ваши личные данные третьим лицам.
+    </div>
+
+    <div class="toc">
+      <div class="toc-title">Содержание документа:</div>
+      <ul>
+        <li><a href="#section-1">1. Общие положения и оператор данных</a></li>
+        <li><a href="#section-2">2. Какую информацию мы собираем</a></li>
+        <li><a href="#section-3">3. Цели и правовые основания обработки данных</a></li>
+        <li><a href="#section-4">4. Использование данных аккаунтов Google (Google Sign-In)</a></li>
+        <li><a href="#section-5">5. Разрешения мобильного приложения</a></li>
+        <li><a href="#section-6">6. Безопасность и передача данных третьим лицам</a></li>
+        <li><a href="#section-7">7. Сроки хранения и процедура удаления аккаунта</a></li>
+        <li><a href="#section-8">8. Права пользователей</a></li>
+        <li><a href="#section-9">9. Контактная информация</a></li>
+      </ul>
+    </div>
+
+    <h2 id="section-1">1. Общие положения и оператор данных</h2>
+    <p>Настоящая Политика конфиденциальности (далее — «Политика») определяет порядок обработки и защиты персональной информации физических лиц, использующих сервис <strong>PhoneHub</strong> (включая веб-сайт <a href="https://prodev.uz" target="_blank">prodev.uz</a> и официальное мобильное приложение PhoneHub для операционной системы Android/iOS).</p>
+    <p>Используя сервис PhoneHub, регистрируя учетную запись или публикуя объявления, пользователь подтверждает свое полное согласие с условиями настоящей Политики в соответствии с Законом Республики Узбекистан «О персональных данных» № ЗРУ-547.</p>
+
+    <h2 id="section-2">2. Какую информацию мы собираем</h2>
+    <p>Мы собираем информацию следующих категорий исключительно в объеме, необходимом для работы маркетплейса:</p>
+    
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Категория</th>
+            <th>Собираемые данные</th>
+            <th>Для чего используется</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Учетные данные</strong></td>
+            <td>Номер мобильного телефона, одноразовые SMS-коды (OTP), имя пользователя / никнейм. При входе через Google: имя, адрес электронной почты, фото профиля и уникальный Google ID.</td>
+            <td>Создание профиля, подтверждение личности, защита от спама и взлома аккаунтов.</td>
+          </tr>
+          <tr>
+            <td><strong>Данные объявлений</strong></td>
+            <td>Характеристики устройств (бренд, модель, память, емкость аккумулятора, состояние корпуса, статус регистрации в системе UZIMEI), стоимость, город продажи, фотографии смартфонов.</td>
+            <td>Публикация торговых предложений, поиск и сравнение моделей покупателями.</td>
+          </tr>
+          <tr>
+            <td><strong>Медиафайлы</strong></td>
+            <td>Фотографии, выбранные пользователем для загрузки в объявление или для аватара профиля.</td>
+            <td>Отображение состояния продаваемого смартфона потенциальным покупателям.</td>
+          </tr>
+          <tr>
+            <td><strong>Сообщения и чаты</strong></td>
+            <td>Текст сообщений во встроенном чате между покупателем и продавцом.</td>
+            <td>Обеспечение безопасной коммуникации и условий сделки внутри платформы.</td>
+          </tr>
+          <tr>
+            <td><strong>Технические сведения</strong></td>
+            <td>Модель устройства, версия ОС, уникальные идентификаторы устройства (Device ID), логи ошибок, IP-адрес при запросах.</td>
+            <td>Стабильность работы приложения, выявление сбоев, предотвращение мультиаккаунтов и мошенничества.</td>
+          </tr>
+          <tr>
+            <td><strong>Регион</strong></td>
+            <td>Выбранный пользователем город/район (например, г. Ташкент, Самаркандская область).</td>
+            <td>Сортировка и фильтрация объявлений по локациям в Узбекистане.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="section-3">3. Цели и правовые основания обработки данных</h2>
+    <p>Обработка персональных данных осуществляется на законной основе для:</p>
+    <ul>
+      <li>Предоставления полного доступа к функционалу маркетплейса смартфонов;</li>
+      <li>Идентификации стороны сделки и предотвращения мошеннических действий;</li>
+      <li>Связи с пользователем по вопросам работы сервиса, модерации объявлений и уведомлений;</li>
+      <li>Технической поддержки и исправления системных ошибок;</li>
+      <li>Выполнения обязательств, предусмотренных законодательством Республики Узбекистан.</li>
+    </ul>
+
+    <h2 id="section-4">4. Использование данных аккаунтов Google (Google Sign-In)</h2>
+    <p>Если вы выбираете вход в приложение с помощью учетной записи Google (Google Sign-In):</p>
+    <ul>
+      <li>PhoneHub запрашивает доступ только к базовым общедоступным данным профиля: вашему имени (Name), адресу электронной почты (Email) и общедоступному аватару;</li>
+      <li>Данные Google используются исключительно для создания и авторизации вашего аккаунта PhoneHub;</li>
+      <li>Мы <strong>не передаем</strong> полученные от Google данные сторонним рекламным платформам или брокерам данных;</li>
+      <li>Обработка данных Google полностью соответствует <em>Google API Services User Data Policy</em>, включая требования ограниченного использования (Limited Use requirements).</li>
+    </ul>
+
+    <h2 id="section-5">5. Разрешения мобильного приложения</h2>
+    <p>Мобильное приложение PhoneHub может запрашивать доступ к определенным системным ресурсам устройства:</p>
+    <ul>
+      <li><strong>Фотогалерея и медиафайлы (READ_MEDIA_IMAGES / Gallery):</strong> требуется <em>только</em> в момент, когда вы самостоятельно нажимаете кнопку добавления фото к объявлению или в профиль. Мы не сканируем и не читаем файлы, не относящиеся к объявлению.</li>
+      <li><strong>Камера (CAMERA):</strong> запрашивается опционально, если вы хотите сделать снимок продаваемого телефона прямо из приложения.</li>
+      <li><strong>Push-уведомления (POST_NOTIFICATIONS):</strong> для информирования вас о новых сообщениях от покупателей/продавцов, изменениях статуса модерации объявления или снижении цены. Вы можете отключить уведомления в настройках телефона в любой момент.</li>
+    </ul>
+
+    <h2 id="section-6">6. Безопасность и передача данных третьим лицам</h2>
+    <p>Мы принимаем строгие технические и организационные меры безопасности:</p>
+    <ul>
+      <li>Все сетевые запросы между приложением и нашими серверами зашифрованы с использованием современных криптографических протоколов <strong>HTTPS / TLS</strong>.</li>
+      <li>Пароли и ключи сессий хешируются и не сохраняются в открытом виде.</li>
+      <li>Мы <strong>не продаем</strong>, не сдаем в аренду и не передаем персональные данные сторонним коммерческим компаниям.</li>
+      <li>Передача данных возможна только уполномоченным государственным органам Республики Узбекистан строго по официальному запросу в соответствии с действующим законодательством.</li>
+    </ul>
+
+    <h2 id="section-7">7. Сроки хранения и процедура удаления аккаунта</h2>
+    <p>Мы храним ваши данные в течение срока активности вашей учетной записи.</p>
+    
+    <div class="callout-warning">
+      <strong>Право на удаление данных:</strong> В соответствии с правилами Google Play и законодательством, каждый пользователь имеет право в любой момент полностью удалить свой аккаунт и всю связанную информацию.
+    </div>
+
+    <p><strong>Способы удаления аккаунта и персональных данных:</strong></p>
+    <ol>
+      <li><strong>В мобильном приложении PhoneHub:</strong> Откройте вкладку <em>«Профиль»</em> &rarr; прокрутите вниз &rarr; выберите пункт <em>«Удалить аккаунт и данные»</em> и подтвердите действие.</li>
+      <li><strong>Через онлайн-форму:</strong> На официальной веб-странице запроса на удаление: <a href="delete-account.html">Запрос на удаление данных PhoneHub</a>.</li>
+      <li><strong>Через службу поддержки:</strong> Направьте письменный запрос на почту <a href="mailto:hayotilla82@gmail.com?subject=PhoneHub:%20Удаление%20аккаунта">hayotilla82@gmail.com</a> с темой <em>«Удаление аккаунта»</em> и указанием привязанного номера телефона.</li>
+    </ol>
+    <p>При получении запроса учетная запись деактивируется, а все связанные с ней личные данные, опубликованные объявления, фотографии и переписка удаляются безвозвратно из основных баз данных в срок до 30 календарных дней.</p>
+
+    <h2 id="section-8">8. Права пользователей</h2>
+    <p>Вы имеете право:</p>
+    <ul>
+      <li>Знать, какие именно ваши персональные данные обрабатываются;</li>
+      <li>Редактировать, обновлять и дополнять данные своего профиля;</li>
+      <li>Отозвать свое согласие на обработку данных и потребовать их удаления;</li>
+      <li>Обжаловать неправомерные действия оператора персональных данных в уполномоченных органах.</li>
+    </ul>
+
+    <h2 id="section-9">9. Контактная информация</h2>
+    <p>По всем вопросам, предложениям или жалобам касательно настоящей Политики конфиденциальности и обработки ваших данных вы можете связаться с нами:</p>
+    <ul>
+      <li><strong>Сервис:</strong> PhoneHub / ProDev</li>
+      <li><strong>Email службы поддержки:</strong> <a href="mailto:hayotilla82@gmail.com">hayotilla82@gmail.com</a></li>
+      <li><strong>Веб-сайт:</strong> <a href="https://prodev.uz" target="_blank">https://prodev.uz</a></li>
+      <li><strong>Страница удаления аккаунта:</strong> <a href="delete-account.html">delete-account.html</a></li>
+      <li><strong>Юрисдикция:</strong> Республика Узбекистан</li>
+    </ul>
+
+    <div class="footer">
+      <div>&copy; 2026 PhoneHub (ProDev). Все права защищены.</div>
+      <div class="footer-links">
+        <a href="delete-account.html">Удаление данных</a>
+        <a href="https://prodev.uz" target="_blank">prodev.uz</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
