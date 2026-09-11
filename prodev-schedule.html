@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика конфиденциальности — School Diary (Дневник / Расписание)</title>
+  <meta name="description" content="Политика конфиденциальности и безопасности данных мобильных приложений «School Diary: Ученик» и «School Diary: Учитель».">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #eff6ff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border: #e2e8f0;
+      --accent: #059669;
+      --accent-light: #ecfdf5;
+      --warning-bg: #fffbeb;
+      --warning-border: #fef3c7;
+      --warning-text: #92400e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding-bottom: 60px;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .brand-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .lang-switch {
+      display: flex;
+      background: #f1f5f9;
+      border-radius: 6px;
+      padding: 3px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: #ffffff;
+      color: var(--primary);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+
+    .main-wrapper {
+      max-width: 960px;
+      margin: 32px auto 0;
+      padding: 0 24px;
+    }
+
+    .hero-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .date-meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .quick-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .quick-link-item {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fafafa;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .quick-link-item:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .quick-link-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .quick-link-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .content-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #334155;
+      margin: 20px 0 10px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: #334155;
+      font-size: 0.96rem;
+    }
+
+    ul, ol {
+      margin-left: 24px;
+      margin-bottom: 16px;
+      color: #334155;
+      font-size: 0.96rem;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .alert-box {
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 18px 0;
+      font-size: 0.92rem;
+    }
+
+    .alert-camera {
+      background: #eff6ff;
+      border-left: 4px solid var(--primary);
+      color: #1e3a8a;
+    }
+
+    .alert-safety {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      color: #065f46;
+    }
+
+    .alert-deletion {
+      background: #fff7ed;
+      border-left: 4px solid #ea580c;
+      color: #9a3412;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 16px 0 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    th {
+      background: #f8fafc;
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    .contact-card {
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+      padding: 18px;
+      margin-top: 14px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+    }
+
+    .contact-label {
+      font-weight: 600;
+      min-width: 130px;
+      color: #475569;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Language Switch Logic */
+    .lang-section {
+      display: block;
+    }
+    body.show-en .lang-ru {
+      display: none;
+    }
+    body:not(.show-en) .lang-en {
+      display: none;
+    }
+
+    @media (max-width: 640px) {
+      .hero-card, .content-card {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.45rem;
+      }
+      .contact-item {
+        flex-direction: column;
+        gap: 2px;
+      }
+      .contact-label {
+        min-width: unset;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo">SD</div>
+        <div>
+          <div class="brand-title">School Diary / Расписание</div>
+          <div class="brand-subtitle">Мобильные сервисы для школ и колледжей</div>
+        </div>
+      </div>
+      <div class="lang-switch">
+        <button class="lang-btn active" id="btn-ru" onclick="setLanguage('ru')">Русский</button>
+        <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">English</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+
+    <!-- ======================================================== -->
+    <!-- RUSSIAN VERSION -->
+    <!-- ======================================================== -->
+    <div class="lang-section lang-ru">
+
+      <div class="hero-card">
+        <div class="hero-badge">Официальный документ</div>
+        <h1>Политика конфиденциальности и безопасности данных</h1>
+        <div class="date-meta">
+          <strong>Дата вступления в силу:</strong> 11 сентября 2026 г. | <strong>Версия:</strong> 1.0<br>
+          <strong>Действует в отношении приложений:</strong> «School Diary: Ученик» (com.schooldiary.student_app) и «School Diary: Учитель» (com.schooldiary.teacher_app).
+        </div>
+
+        <div class="quick-links-grid">
+          <a href="#ru-camera" class="quick-link-item">
+            <div class="quick-link-title">📷 Доступ к камере</div>
+            <div class="quick-link-desc">Почему приложению Учителя нужна камера и как она используется.</div>
+          </a>
+          <a href="#ru-student-data" class="quick-link-item">
+            <div class="quick-link-title">🎒 Данные учеников</div>
+            <div class="quick-link-desc">Защита личных данных несовершеннолетних и приватность.</div>
+          </a>
+          <a href="#ru-data-deletion" class="quick-link-item">
+            <div class="quick-link-title">🗑️ Удаление данных</div>
+            <div class="quick-link-desc">Порядок отзыва согласия и удаления учетной записи.</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 1. Общие положения -->
+      <section class="content-card" id="ru-general">
+        <h2>1. Общие положения</h2>
+        <p>
+          Настоящая Политика конфиденциальности (далее — «Политика») определяет порядок обработки и защиты персональной информации пользователей мобильных приложений <strong>«School Diary: Ученик»</strong> и <strong>«School Diary: Учитель»</strong> (далее — «Приложения»), разработанных для автоматизации и синхронизации школьного расписания уроков.
+        </p>
+        <p>
+          Мы уважаем право пользователей на конфиденциальность и стремимся обеспечить максимальную прозрачность при использовании наших цифровых образовательных сервисов в соответствии с требованиями законодательства о персональных данных и правил программы для разработчиков <strong>Google Play</strong>.
+        </p>
+      </section>
+
+      <!-- 2. Сбор и обработка данных -->
+      <section class="content-card" id="ru-collection">
+        <h2>2. Какие данные обрабатываются</h2>
+        
+        <h3>2.1. Мобильное приложение «School Diary: Ученик»</h3>
+        <ul>
+          <li><strong>Регистрационные данные:</strong> Фамилия, имя ученика, выбранный город, район, школа, класс.</li>
+          <li><strong>Контактные данные:</strong> Номер телефона (используется исключительно для идентификации заявки классным руководителем).</li>
+          <li><strong>Технические данные расписания:</strong> Локальный кэш расписания уроков, звонков и заметок (сохраняется во внутреннем защищенном хранилище устройства для автономного доступа без интернета).</li>
+        </ul>
+
+        <h3>2.2. Мобильное приложение «School Diary: Учитель»</h3>
+        <ul>
+          <li><strong>Учетные данные преподавателя:</strong> ФИО, логин/номер телефона, закрепленные учебные заведения и классы.</li>
+          <li><strong>Данные управления расписанием:</strong> Информация об уроках, предметах, кабинетах, заменах и отмененных занятиях.</li>
+        </ul>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Категория данных</th>
+                <th>Цель обработки</th>
+                <th>Передача третьим лицам</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ФИО и класс ученика</td>
+                <td>Отображение персонального расписания и модерация учителем</td>
+                <td><strong>Никогда не передаются</strong></td>
+              </tr>
+              <tr>
+                <td>Номер телефона</td>
+                <td>Авторизация и подтверждение принадлежности к классу</td>
+                <td><strong>Никогда не передаются</strong></td>
+              </tr>
+              <tr>
+                <td>Камера (только Учитель)</td>
+                <td>Мгновенное сканирование QR-кода авторизации</td>
+                <td><strong>Кадры обрабатываются исключительно локально</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 3. Разрешение на доступ к Камере -->
+      <section class="content-card" id="ru-camera">
+        <h2>3. Использование камеры (Camera Permission)</h2>
+        <div class="alert-box alert-camera">
+          <strong>Важная информация о доступе к камере в приложении «School Diary: Учитель»:</strong><br>
+          Разрешение <code>android.permission.CAMERA</code> используется <strong>исключительно</strong> для оперативного считывания персонального QR-кода авторизации преподавателя (с экрана компьютера или распечатанного листа).
+        </div>
+        <p>При использовании камеры действуют строгие гарантии безопасности:</p>
+        <ol>
+          <li>Поток видеокадров анализируется библиотекой <code>mobile_scanner</code> <strong>непосредственно в оперативной памяти устройства</strong>.</li>
+          <li>Фотографии, скриншоты или видеозаписи <strong>никогда не сохраняются</strong> в памяти устройства или галерее.</li>
+          <li>Изображения <strong>никогда не загружаются</strong> на внешние серверы или в облачные хранилища.</li>
+          <li>После успешного распознавания токена в QR-коде модуль камеры немедленно выключается.</li>
+          <li>Приложение <strong>«School Diary: Ученик» не запрашивает</strong> доступ к камере.</li>
+        </ol>
+      </section>
+
+      <!-- 4. Безопасность детей и учащихся -->
+      <section class="content-card" id="ru-student-data">
+        <h2>4. Защита конфиденциальности детей и школьников (Children's Privacy)</h2>
+        <div class="alert-box alert-safety">
+          Наши образовательные приложения ориентированы на школьников, родителей и преподавателей. Мы строго соблюдаем требования политики Google Play в отношении семей и детей (Families Policy).
+        </div>
+        <ul>
+          <li><strong>Никакой рекламы:</strong> В наших приложениях полностью отсутствует любая коммерческая реклама, баннеры, всплывающие окна и рекламные трекеры.</li>
+          <li><strong>Отсутствие коммерческого профилирования:</strong> Мы не ведем поведенческий анализ учащихся, не передаем данные брокерам данных и не используем аналитику в рекламных целях.</li>
+          <li><strong>Минимальный объем данных:</strong> Собираются только те сведения, которые объективно необходимы для отображения школьного расписания.</li>
+        </ul>
+      </section>
+
+      <!-- 5. Безопасность и хранение данных -->
+      <section class="content-card" id="ru-security">
+        <h2>5. Защита информации и шифрование (Data Safety)</h2>
+        <p>
+          Мы применяем комплекс организационных и программно-технических мер для защиты персональной информации от несанкционированного доступа:
+        </p>
+        <ul>
+          <li><strong>Шифрование при передаче:</strong> Все сетевые запросы между мобильными приложениями и бэкенд-сервером осуществляются исключительно по защищенному протоколу HTTPS с шифрованием TLS.</li>
+          <li><strong>Безопасное локальное хранилище:</strong> Токены авторизации и локальное расписание хранятся в изолированной песочнице операционной системы Android (SharedPreferences).</li>
+          <li><strong>Ограниченный доступ:</strong> К базе данных имеют доступ только уполномоченные системные администраторы образовательного учреждения.</li>
+        </ul>
+      </section>
+
+      <!-- 6. Удаление аккаунта и данных -->
+      <section class="content-card" id="ru-data-deletion">
+        <h2>6. Порядок удаления учетной записи и персональных данных (Data Deletion)</h2>
+        <div class="alert-box alert-deletion">
+          <strong>Право на забвение и удаление данных:</strong> В соответствии с требованиями Google Play каждый пользователь или законный представитель несовершеннолетнего ученика имеет безусловное право потребовать полного удаления своих данных.
+        </div>
+        <p>Для удаления аккаунта и всех связанных с ним записей вы можете воспользоваться любым удобным способом:</p>
+        <ol>
+          <li><strong>В приложении:</strong> Перейдите в раздел «Настройки / Профиль» и нажмите кнопку «Удалить учетную запись».</li>
+          <li><strong>Через классного руководителя / администратора школы:</strong> Администратор школы может отозвать или удалить профиль ученика в панели управления.</li>
+          <li><strong>По электронной почте:</strong> Отправьте запрос на адрес <a href="mailto:support@prodev.uz">support@prodev.uz</a> с темой письма <em>«Запрос на удаление данных школьного расписания»</em>, указав ваше имя, школу и класс.</li>
+        </ol>
+        <p>
+          После получения запроса все персональные данные (ФИО, телефон, заявки на вступление в класс) удаляются безвозвратно из рабочей базы данных в течение 7 (семи) календарных дней.
+        </p>
+      </section>
+
+      <!-- 7. Контакты -->
+      <section class="content-card" id="ru-contacts">
+        <h2>7. Контактная информация разработчика</h2>
+        <p>Если у вас есть вопросы, предложения или претензии относительно данной Политики конфиденциальности, пожалуйста, свяжитесь с нами:</p>
+        
+        <div class="contact-card">
+          <div class="contact-item">
+            <span class="contact-label">Разработчик:</span>
+            <span>Команда разработки «ProDev Schedule» / School Diary</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Email поддержки:</span>
+            <span><a href="mailto:support@prodev.uz">support@prodev.uz</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Веб-сайт проекта:</span>
+            <span><a href="https://schedule.prodev.uz" target="_blank" rel="noopener">https://schedule.prodev.uz</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Юрисдикция:</span>
+            <span>Республика Узбекистан</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- ENGLISH VERSION (FOR GOOGLE PLAY REVIEWERS) -->
+    <!-- ======================================================== -->
+    <div class="lang-section lang-en">
+
+      <div class="hero-card">
+        <div class="hero-badge">Official Policy</div>
+        <h1>Privacy and Data Security Policy</h1>
+        <div class="date-meta">
+          <strong>Effective Date:</strong> September 11, 2026 | <strong>Version:</strong> 1.0<br>
+          <strong>Applies to Applications:</strong> "School Diary: Student" (com.schooldiary.student_app) and "School Diary: Teacher" (com.schooldiary.teacher_app).
+        </div>
+
+        <div class="quick-links-grid">
+          <a href="#en-camera" class="quick-link-item">
+            <div class="quick-link-title">📷 Camera Access</div>
+            <div class="quick-link-desc">Clear disclosure on why and how the camera is used.</div>
+          </a>
+          <a href="#en-children" class="quick-link-item">
+            <div class="quick-link-title">🎒 Children's Privacy</div>
+            <div class="quick-link-desc">Full compliance with Google Play Families Policy.</div>
+          </a>
+          <a href="#en-deletion" class="quick-link-item">
+            <div class="quick-link-title">🗑️ Account & Data Deletion</div>
+            <div class="quick-link-desc">Transparent procedure for user data deletion requests.</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 1. Introduction -->
+      <section class="content-card">
+        <h2>1. Introduction</h2>
+        <p>
+          This Privacy Policy explains how <strong>"School Diary: Student"</strong> and <strong>"School Diary: Teacher"</strong> (collectively, the "Applications") collect, use, process, and safeguard user data. The applications are designed exclusively to streamline class schedules, timetable updates, and academic notifications between educators and students.
+        </p>
+        <p>
+          We are committed to user privacy and full compliance with <strong>Google Play Developer Program Policies</strong>, including the Families Policy and User Data standards.
+        </p>
+      </section>
+
+      <!-- 2. Data Collection -->
+      <section class="content-card">
+        <h2>2. Information We Collect</h2>
+        <h3>2.1. "School Diary: Student" Application</h3>
+        <ul>
+          <li><strong>Profile Data:</strong> Student's full name, selected city, district, educational institution, and assigned class.</li>
+          <li><strong>Contact Details:</strong> Phone number (used exclusively for teacher moderation and verifying class enrollment).</li>
+          <li><strong>Local Timetable Cache:</strong> Stored locally on the user's device for uninterrupted offline access to class schedules.</li>
+        </ul>
+
+        <h3>2.2. "School Diary: Teacher" Application</h3>
+        <ul>
+          <li><strong>Teacher Profile:</strong> Full name, credentials, and assigned classes.</li>
+          <li><strong>Curriculum Management Data:</strong> Lesson timetables, room numbers, substitutions, and schedule modifications.</li>
+        </ul>
+      </section>
+
+      <!-- 3. Camera Access Disclosure -->
+      <section class="content-card" id="en-camera">
+        <h2>3. Prominent Camera Permission Disclosure</h2>
+        <div class="alert-box alert-camera">
+          <strong>Camera Access Disclosure for "School Diary: Teacher":</strong><br>
+          The <code>android.permission.CAMERA</code> permission is requested and used <strong>solely to scan authentication QR codes</strong> generated by the school administration dashboard for quick and secure teacher login.
+        </div>
+        <ul>
+          <li>Camera frames are processed <strong>in-memory locally on the device</strong> in real-time.</li>
+          <li>No photos, video streams, or image recordings are ever stored on disk or gallery.</li>
+          <li>No camera data is ever transmitted, uploaded to servers, or shared with third parties.</li>
+          <li>The camera sensor is immediately deactivated as soon as the QR code token is detected.</li>
+          <li><strong>"School Diary: Student" does NOT request or use camera access.</strong></li>
+        </ul>
+      </section>
+
+      <!-- 4. Children and Family Policy -->
+      <section class="content-card" id="en-children">
+        <h2>4. Children's Privacy and Families Policy Compliance</h2>
+        <div class="alert-box alert-safety">
+          Our Student application serves educational purposes and adheres strictly to Google Play's Families Policy and global child privacy guidelines (including COPPA principles).
+        </div>
+        <ul>
+          <li><strong>Zero Ads:</strong> Our applications are completely free of commercial advertisements, third-party banners, or sponsored content.</li>
+          <li><strong>No Data Monetization:</strong> We never sell, rent, lease, or trade student or teacher personal information to data brokers or marketing firms.</li>
+          <li><strong>Data Minimization:</strong> Only data strictly essential for school schedule distribution is collected.</li>
+        </ul>
+      </section>
+
+      <!-- 5. Data Security -->
+      <section class="content-card">
+        <h2>5. Data Security and Encryption (Data Safety)</h2>
+        <p>We implement robust technical and procedural safeguards to keep information secure:</p>
+        <ul>
+          <li><strong>Encryption in Transit:</strong> All communications between the mobile apps and our backend API use HTTPS with TLS encryption.</li>
+          <li><strong>Secure Device Storage:</strong> Tokens and timetable caches are kept in sandboxed app-private storage (SharedPreferences).</li>
+          <li><strong>Access Governance:</strong> Backend databases are protected by authentication layers and restricted administrative roles.</li>
+        </ul>
+      </section>
+
+      <!-- 6. Account and Data Deletion -->
+      <section class="content-card" id="en-deletion">
+        <h2>6. Account and Data Deletion Instructions</h2>
+        <div class="alert-box alert-deletion">
+          Users and legal guardians have the right to request the permanent deletion of their account and associated personal data at any time.
+        </div>
+        <p>To initiate data deletion, you may choose one of the following methods:</p>
+        <ol>
+          <li><strong>In-App:</strong> Navigate to <em>Settings / Profile</em> and select <em>"Delete Account"</em>.</li>
+          <li><strong>Through School Admin:</strong> Contact your school's class supervisor or system administrator to remove your record.</li>
+          <li><strong>Via Email:</strong> Send an email to <a href="mailto:support@prodev.uz">support@prodev.uz</a> with the subject line <em>"Data Deletion Request"</em>, providing your registered name, school, and class.</li>
+        </ol>
+        <p>All personal data will be permanently purged from active production systems within 7 calendar days of request verification.</p>
+      </section>
+
+      <!-- 7. Contact -->
+      <section class="content-card">
+        <h2>7. Developer Contact Information</h2>
+        <div class="contact-card">
+          <div class="contact-item">
+            <span class="contact-label">Developer:</span>
+            <span>ProDev Schedule Development Team</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Support Email:</span>
+            <span><a href="mailto:support@prodev.uz">support@prodev.uz</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Website:</span>
+            <span><a href="https://schedule.prodev.uz" target="_blank" rel="noopener">https://schedule.prodev.uz</a></span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2026 ProDev Schedule. Все права защищены. / All rights reserved.
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      const btnRu = document.getElementById('btn-ru');
+      const btnEn = document.getElementById('btn-en');
+      if (lang === 'en') {
+        document.body.classList.add('show-en');
+        btnEn.classList.add('active');
+        btnRu.classList.remove('active');
+        document.documentElement.lang = 'en';
+      } else {
+        document.body.classList.remove('show-en');
+        btnRu.classList.add('active');
+        btnEn.classList.remove('active');
+        document.documentElement.lang = 'ru';
+      }
+    }
+  </script>
+</body>
+</html>
